@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cart_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="10dp"
+            android:text="Cart"
+            android:textAlignment="center"
+
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/clear_all"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="0dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="CLEAR ALL"
+            android:textColor="#FFF"
+            android:textSize="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cart_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cart_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:id="@+id/prices_layout"
+            android:layout_below="@+id/cart_recycler"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/before_tax_text"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Price before Tax:"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/before_tax_real"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/price_with_tax_text"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Price with Tax:"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/price_with_tax_real"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/total_price_with_discount_text"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Total Price with Tax And Discount:"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/total_price_with_discount_real"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""/>
+
+            </TableRow>
+        </TableLayout>
+
+
+        <EditText
+            android:id="@+id/enter_discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/prices_layout"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Enter Discount Percentage"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/apply_discount"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/enter_discount"
+            android:background="@color/colorPrimary"
+            android:text="APPLY DISCOUNT"
+            android:textColor="#FFF"
+            android:textSize="16dp"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+</ScrollView>
