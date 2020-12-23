@@ -1,10 +1,4 @@
-# GroceriesCSC301 Mobile Application
-
-This is a simple price checkout calculator. 
-
-Citation/Note: Projects classes are created in reference to CodingOnFlow's tutorial on RecyclerViews and CartViews. 
-
-Youtube playlist link: https://www.youtube.com/playlist?list=PLrnPJCHvNZuBtTYUuc5Pyo4V7xZ2HNtf4
+# Android Grocery
 
 ## Setup 
 1. After you clone the directory, open the project with Android Studio. Make sure you have "GroceriesCSC301 copy 2" set as your root directory. Navigate to ~/app/src/java/com.example.groceriescsc301/MainActivity.java
